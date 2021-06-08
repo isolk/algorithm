@@ -2,10 +2,11 @@ package main
 
 import (
 	"algorithm/llist"
-	"fmt"
 )
 
 func main() {
-	y := llist.NewCycle([]int{}, -1)
-	fmt.Println(llist.HasCycle(y))
+	y1 := llist.New([]int{0})
+	y2 := llist.New([]int{})
+	y3 := llist.MergeTwoLists(y1, y2)
+	llist.Print(y3)
 }
