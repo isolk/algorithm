@@ -33,8 +33,10 @@ func NewCycle(values []int, pos int) *ListNode {
 }
 
 func Print(l *ListNode) {
+	values := []int{}
 	for l != nil {
-		fmt.Println(l.Val)
+		values = append(values, l.Val)
 		l = l.Next
 	}
+	fmt.Printf("%v\n", values)
 }
