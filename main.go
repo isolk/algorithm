@@ -1,19 +1,27 @@
 package main
 
 import (
-	"algorithm/stack"
+	"algorithm/queue"
 	"fmt"
 )
 
 func main() {
-	fmt.Println(stack.RemoveDuplicates(""))
-	fmt.Println(stack.RemoveDuplicates("a"))
-	fmt.Println(stack.RemoveDuplicates("ab"))
-	fmt.Println(stack.RemoveDuplicates("abb"))
-	fmt.Println(stack.RemoveDuplicates("abbb"))
-	fmt.Println(stack.RemoveDuplicates("abbbb"))
-	fmt.Println(stack.RemoveDuplicates("abcc"))
-	fmt.Println(stack.RemoveDuplicates("abccd"))
-	fmt.Println(stack.RemoveDuplicates("abccb"))
-	fmt.Println(stack.RemoveDuplicates("abccbeebggbe"))
+	f := queue.NewQueue(3)
+	f.Enqueue(1)
+	f.Enqueue(2)
+	f.Enqueue(3)
+	fmt.Println(f.Dequeue())
+	fmt.Println(f.Dequeue())
+	f.Enqueue(4)
+	f.Enqueue(5)
+	fmt.Println(f.Dequeue())
+	fmt.Println(f.Dequeue())
+	fmt.Println(f.Dequeue())
+
+	f.Enqueue(1)
+	f.Enqueue(2)
+	f.Enqueue(3)
+	fmt.Println(f.Dequeue())
+	fmt.Println(f.Dequeue())
+	fmt.Println(f.Dequeue())
 }
